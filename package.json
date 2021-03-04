@@ -1,0 +1,16 @@
+{
+  "name": "registration-form",
+  "version": "1.0.0",
+  "description": "A simple registration form using Node, express and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ratul-oss",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.15",
+    "validator": "^13.5.2"
+  }
+}
