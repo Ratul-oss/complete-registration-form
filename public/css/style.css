@@ -1,9 +1,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Noto Sans JP", sans-serif;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px 0px;
+  background: linear-gradient(45deg, #00a2ff, #ff00aa);
+}
+
+nav h2 {
+  font-family: "Goldman", cursive;
+  color: white;
+  text-shadow: 1px 2px 5px black;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0px 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ddd;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: white;
+  text-shadow: 1px 2px 5px white;
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    cursor: default !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
