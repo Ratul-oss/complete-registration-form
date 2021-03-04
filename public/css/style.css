@@ -1,11 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Noto Sans JP", sans-serif;
+}
+
+.Container {
+  width: 950px;
+  margin: auto;
 }
 
 nav {
@@ -20,13 +26,17 @@ nav {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 10px 0px;
-  background: linear-gradient(45deg, #00a2ff, #ff00aa);
+  background: linear-gradient(45deg, rgba(0, 5, 5, 0.925), rgba(0, 1, 2, 0.918));
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 nav h2 {
   font-family: "Goldman", cursive;
   color: white;
-  text-shadow: 1px 2px 5px black;
+  text-shadow: 1px 1px 5px black;
 }
 
 nav ul {
@@ -45,7 +55,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #ddd;
+  color: #fff;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -55,9 +65,81 @@ nav ul li a:hover {
   text-shadow: 1px 2px 5px white;
 }
 
+header {
+  padding: 50px 0px;
+  min-height: 90vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, right top, left top, from(#00000050), to(#00000010)), url(../img/headerbg.jpg);
+  background: linear-gradient(to left, #00000050, #00000010), url(../img/headerbg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+header #HederDesc {
+  width: 400px;
+}
+
+header #HederDesc h1 {
+  color: #0099ff;
+  text-shadow: 1px 2px 5px black;
+  font-family: "Work Sans", sans-serif;
+  font-size: 2.2rem;
+}
+
+header #HederDesc p {
+  color: white;
+  padding: 5px 0px;
+}
+
+header #HederDesc a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 30px;
+  font-size: 1.1rem;
+  border: 2px solid #0099ff;
+  color: #0099ff;
+  margin: 10px 0px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-radius: 5px;
+}
+
+header #HederDesc a:hover {
+  background: #0099ff;
+  color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .Container {
+    width: 750px !important;
+  }
+  header #HederDesc {
+    width: 500px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   * {
     cursor: default !important;
+  }
+  .Container {
+    width: 95% !important;
+  }
+  header {
+    height: 90vh;
+  }
+  header #HederDesc {
+    width: 100%;
+  }
+  header #HederDesc h1 {
+    font-size: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

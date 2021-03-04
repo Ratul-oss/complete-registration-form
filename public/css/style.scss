@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
 
 * {
   margin: 0;
@@ -8,17 +9,29 @@
   font-family: "Noto Sans JP", sans-serif;
 }
 
+.Container {
+  width: 950px;
+  margin: auto;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   padding: 10px 0px;
-  background: linear-gradient(45deg, rgb(0, 162, 255), rgb(255, 0, 170));
+  background: linear-gradient(
+    45deg,
+    rgba(0, 5, 5, 0.925),
+    rgba(0, 1, 2, 0.918)
+  );
+  position: sticky;
+  top: 0;
+  left: 0;
   h2 {
     font-family: "Goldman", cursive;
     color: white;
-    text-shadow: 1px 2px 5px black;
+    text-shadow: 1px 1px 5px black;
   }
   ul {
     display: flex;
@@ -28,7 +41,7 @@ nav {
       margin: 0px 10px;
       a {
         text-decoration: none;
-        color: #ddd;
+        color: #fff;
         transition: 0.3s;
         &:hover {
           color: white;
@@ -39,8 +52,73 @@ nav {
   }
 }
 
+header {
+  padding: 50px 0px;
+  min-height: 90vh;
+  display: grid;
+  align-items: center;
+  background: linear-gradient(to left, #00000050, #00000010),
+    url(../img/headerbg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+  #HederDesc {
+    width: 400px;
+    h1 {
+      color: rgb(0, 153, 255);
+      text-shadow: 1px 2px 5px black;
+      font-family: "Work Sans", sans-serif;
+      font-size: 2.2rem;
+    }
+    p {
+      color: white;
+      padding: 5px 0px;
+    }
+    a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 5px 30px;
+      font-size: 1.1rem;
+      border: 2px solid rgb(0, 153, 255);
+      color: rgb(0, 153, 255);
+      margin: 10px 0px;
+      transition: 0.2s;
+      border-radius: 5px;
+      &:hover {
+        background: rgb(0, 153, 255);
+        color: white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Container {
+    width: 750px !important;
+  }
+  header {
+    #HederDesc {
+      width: 500px;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   * {
     cursor: default !important;
+  }
+  .Container {
+    width: 95% !important;
+  }
+  header {
+    height: 90vh;
+    #HederDesc {
+      width: 100%;
+      h1 {
+        font-size: 2rem;
+      }
+    }
   }
 }
