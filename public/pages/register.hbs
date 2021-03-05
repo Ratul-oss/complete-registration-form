@@ -25,13 +25,17 @@
       <div class="Container">
         <form action="/register" method="POST">
           <div class="inputField">
-            <input required type="text" placeholder="What is your name?" />
+            <input name="userName" required type="text" placeholder="What is your name?" />
           </div>
           <div class="inputField">
-            <input required type="email" placeholder="Enter your email..." />
+            <input name="userEmail" required type="email" placeholder="Enter your email..." />
+          </div>
+          <div class="inputField">
+            <input name="userAge" required type="number" placeholder="Enter your age" />
           </div>
           <div class="inputField">
             <textarea
+            name="userMessage"
               required
               id="message"
               cols="30"

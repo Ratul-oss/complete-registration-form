@@ -5,6 +5,7 @@ const { clear } = require("console");
 require("./db/connection");
 const path = require("path");
 const hbs = require("hbs");
+const DataCol = require("./models/model");
 
 clear();
 
@@ -16,6 +17,8 @@ app.use(express.static(staticFolderPath));
 hbs.registerPartials(partialFolderPath);
 app.set("view engine", "hbs");
 app.set("views", pageFolderPath);
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
   res.render("index", {
@@ -34,6 +37,25 @@ app.get("/getstarted", (req, res) => {
     link: "https://devr.netlify.app/contact",
     linkText: "Contact",
   });
+});
+app.post("/register", async (req, res) => {
+  try {
+    const userName = req.body.userName;
+    const userEmail = req.body.userEmail;
+    const userAge = req.body.userAge;
+    const userMessage = req.body.userMessage;
+
+    const registerData = new DataCol({
+      name: userName,
+      email: userEmail,
+      age: userAge,
+      message: userMessage,
+    });
+    await registerData.save();
+    res.render("success");
+  } catch (err) {
+    res.status(400).send(err);
+  }
 });
 app.listen(port, () => {
   console.log(`Server is listening to port number ${port}`);

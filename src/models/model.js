@@ -20,13 +20,12 @@ const dataSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  password: {
+  message: {
     type: String,
     required: true,
-    unique: true,
   },
 });
 
-const DataCol = new mongoose.model("Registration-Data", dataSchema);
+const DataCol = new mongoose.model("Datalist", dataSchema);
 
 module.exports = DataCol;
