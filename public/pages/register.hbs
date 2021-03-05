@@ -7,11 +7,45 @@
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../css/style.css" />
     <script src="../js/main.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/585143586a.js"
+      crossorigin="anonymous"
+    ></script>
     <title>DevR - Get Started</title>
   </head>
   <body>
     {{>navBar}}
     {{>header}}
-    <h1>Hi there</h1>
+
+    <section id="RegistrationForm">
+      <div class="sectionTitle">
+        <h2>Getting Started</h2>
+        <p>Send me the correct information to get started</p>
+        <div class="line"></div>
+      <div class="Container">
+        <form action="/register" method="POST">
+          <div class="inputField">
+            <input required type="text" placeholder="What is your name?" />
+          </div>
+          <div class="inputField">
+            <input required type="email" placeholder="Enter your email..." />
+          </div>
+          <div class="inputField">
+            <textarea
+              required
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Your message..."
+            ></textarea>
+          </div>
+          <div class="inputField">
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    {{>footer}}
   </body>
 </html>

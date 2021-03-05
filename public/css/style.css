@@ -20,6 +20,10 @@
   color: white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a,
 button,
 h1 {
@@ -181,8 +185,9 @@ header #HederDesc a:hover {
   width: 300px;
   text-align: center;
   padding: 20px;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin: 20px 0px;
 }
 
 #Services #ServiceBoxWrapper .singleServiceBox:hover {
@@ -201,6 +206,112 @@ header #HederDesc a:hover {
   color: #0099ff;
 }
 
+footer {
+  background: #06090f;
+  padding: 30px 0px;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer ul li {
+  list-style: none;
+}
+
+footer ul li:hover i {
+  color: white;
+}
+
+footer ul li:hover a {
+  color: #0099ff;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-family: "Raleway", sans-serif;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+footer ul li i {
+  color: #0099ff;
+  padding: 0px 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#RegistrationForm {
+  padding: 50px 0px;
+}
+
+#RegistrationForm form {
+  padding: 30px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#RegistrationForm form .inputField {
+  margin: 5px auto;
+  width: 500px;
+}
+
+#RegistrationForm form .inputField input,
+#RegistrationForm form .inputField button,
+#RegistrationForm form .inputField textarea {
+  width: 100%;
+  outline: none;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+#RegistrationForm form .inputField input,
+#RegistrationForm form .inputField textarea {
+  border: 1px solid #ddd;
+}
+
+#RegistrationForm form .inputField textarea {
+  resize: vertical;
+}
+
+#RegistrationForm form .inputField button {
+  background: #0099ff;
+  color: white;
+  padding: 7px 0px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#RegistrationForm form .inputField button:hover {
+  background: #ff008c;
+}
+
 @media screen and (max-width: 1024px) {
   .Container {
     width: 750px !important;
@@ -217,14 +328,24 @@ header #HederDesc a:hover {
   .Container {
     width: 95% !important;
   }
-  header {
-    height: 90vh;
-  }
   header #HederDesc {
     width: 100%;
+    text-align: center;
   }
   header #HederDesc h1 {
     font-size: 2rem;
+  }
+  footer ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer ul li {
+    margin: 5px 0px;
+  }
+  form .inputField {
+    width: 100% !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
