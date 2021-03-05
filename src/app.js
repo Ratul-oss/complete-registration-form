@@ -18,7 +18,22 @@ app.set("view engine", "hbs");
 app.set("views", pageFolderPath);
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", {
+    title: "Welcome to DevR",
+    desc:
+      "Build you dream website. With you own choices and preferences. Which will be responsive and pixel perfect.",
+    link: "https://devr.netlify.app/about",
+    linkText: "About",
+  });
+});
+app.get("/getstarted", (req, res) => {
+  res.render("register", {
+    title: "Get Started",
+    desc:
+      "To Get Started, send me some of your correct information using the form below. I will reply you as soon as possible.",
+    link: "https://devr.netlify.app/contact",
+    linkText: "Contact",
+  });
 });
 app.listen(port, () => {
   console.log(`Server is listening to port number ${port}`);

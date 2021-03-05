@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +10,52 @@
   font-family: "Noto Sans JP", sans-serif;
 }
 
+::-moz-selection {
+  background: #0099ff;
+  color: white;
+}
+
+::selection {
+  background: #0099ff;
+  color: white;
+}
+
+a,
+button,
+h1 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .Container {
   width: 950px;
   margin: auto;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin: 10px auto 30px auto;
+}
+
+.sectionTitle .line {
+  width: 70px;
+  margin: 10px auto;
+  height: 5px;
+  background: #0099ff;
+  border-radius: 5px;
+}
+
+.sectionTitle p {
+  color: #616161;
+}
+
+.sectionTitle h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  padding-bottom: 5px;
+  color: #ff008c;
 }
 
 nav {
@@ -33,7 +77,8 @@ nav {
   left: 0;
 }
 
-nav h2 {
+nav h2 a {
+  text-decoration: none;
   font-family: "Goldman", cursive;
   color: white;
   text-shadow: 1px 1px 5px black;
@@ -67,7 +112,7 @@ nav ul li a:hover {
 
 header {
   padding: 50px 0px;
-  min-height: 90vh;
+  min-height: 75vh;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -114,6 +159,46 @@ header #HederDesc a {
 header #HederDesc a:hover {
   background: #0099ff;
   color: white;
+}
+
+#Services {
+  padding: 50px 0px;
+}
+
+#Services #ServiceBoxWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px 0px;
+}
+
+#Services #ServiceBoxWrapper .singleServiceBox {
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+#Services #ServiceBoxWrapper .singleServiceBox:hover {
+  -webkit-box-shadow: 1px 2px 10px #575757;
+          box-shadow: 1px 2px 10px #575757;
+}
+
+#Services #ServiceBoxWrapper .singleServiceBox h2:first-child {
+  font-size: 3rem;
+  background: linear-gradient(45deg, #ff008c, #0099ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#Services #ServiceBoxWrapper .singleServiceBox h2:nth-child(2) {
+  color: #0099ff;
 }
 
 @media screen and (max-width: 1024px) {

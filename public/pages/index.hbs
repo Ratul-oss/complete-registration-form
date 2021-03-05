@@ -6,23 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/main.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/585143586a.js"
+      crossorigin="anonymous"
+    ></script>
     <title>DevR - Build Your Own Website</title>
   </head>
   <body>
     {{>navBar}}
-    <header>
+    {{>header}}
+
+    <section id="Services">
       <div class="Container">
-        <div id="HederDesc">
-          <h1>Welcome to DevR</h1>
-          <p>
-            Build you dream website. With you own choices and preferences. Which
-            will be responsive and pixel perfect.
-          </p>
-          <a href="https://devr.netlify.app/about" rel="noopener noreferrer"
-            >About</a
-          >
+        <div class="sectionTitle">
+          <h2>My Services</h2>
+          <p>I will provide you those services</p>
+          <div class="line"></div>
+        </div>
+
+        <div id="ServiceBoxWrapper">
+          <div class="singleServiceBox">
+            <h2><i class="far fa-object-group"></i></h2>
+            <h2>Web Design</h2>
+            <p>I will design your whole website responsively.</p>
+          </div>
+
+          <div class="singleServiceBox">
+            <h2><i class="fas fa-cogs"></i></h2>
+            <h2>Web Development</h2>
+            <p>I will develop you whole website which will be bug free.</p>
+          </div>
+
+          <div class="singleServiceBox">
+            <h2><i class="fas fa-bug"></i></h2>
+            <h2>Bug Fixing</h2>
+            <p>I will fix the bugs in your website.</p>
+          </div>
         </div>
       </div>
-    </header>
+    </section>
   </body>
 </html>

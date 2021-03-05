@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
 * {
   margin: 0;
@@ -9,9 +10,41 @@
   font-family: "Noto Sans JP", sans-serif;
 }
 
+::selection {
+  background: rgb(0, 153, 255);
+  color: white;
+}
+
+a,
+button,
+h1 {
+  user-select: none;
+}
+
 .Container {
   width: 950px;
   margin: auto;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin: 10px auto 30px auto;
+  .line {
+    width: 70px;
+    margin: 10px auto;
+    height: 5px;
+    background: rgb(0, 153, 255);
+    border-radius: 5px;
+  }
+  p {
+    color: rgb(97, 97, 97);
+  }
+  h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    padding-bottom: 5px;
+    color: rgb(255, 0, 140);
+  }
 }
 
 nav {
@@ -29,9 +62,12 @@ nav {
   top: 0;
   left: 0;
   h2 {
-    font-family: "Goldman", cursive;
-    color: white;
-    text-shadow: 1px 1px 5px black;
+    a {
+      text-decoration: none;
+      font-family: "Goldman", cursive;
+      color: white;
+      text-shadow: 1px 1px 5px black;
+    }
   }
   ul {
     display: flex;
@@ -54,7 +90,7 @@ nav {
 
 header {
   padding: 50px 0px;
-  min-height: 90vh;
+  min-height: 75vh;
   display: grid;
   align-items: center;
   background: linear-gradient(to left, #00000050, #00000010),
@@ -89,6 +125,40 @@ header {
       &:hover {
         background: rgb(0, 153, 255);
         color: white;
+      }
+    }
+  }
+}
+
+#Services {
+  padding: 50px 0px;
+  #ServiceBoxWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 10px 0px;
+    .singleServiceBox {
+      width: 300px;
+      text-align: center;
+      padding: 20px;
+      transition: 0.1s;
+      &:hover {
+        box-shadow: 1px 2px 10px rgb(87, 87, 87);
+      }
+      h2 {
+        &:first-child {
+          font-size: 3rem;
+          background: linear-gradient(
+            45deg,
+            rgb(255, 0, 140),
+            rgb(0, 153, 255)
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        &:nth-child(2) {
+          color: rgb(0, 153, 255);
+        }
       }
     }
   }
